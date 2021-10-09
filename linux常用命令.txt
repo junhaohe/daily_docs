@@ -1,0 +1,13 @@
+1、find . -name "*.o"  | xargs rm -f 递归模糊删除文件
+
+2、find . -type d -name "xxx"  | xargs rm -rf 递归模糊删除文件夹
+
+3、find . -type f -name "*" | wc -l 递归统计文件数量
+
+4、find . -name "*.jpg" > xxx.txt 递归模糊查询文件并将相对路径重定向到txt文件中
+
+5、find . -maxdepth 1 -type d -empty | xargs rm -rf 删除一级目录下文件夹为空的目录
+
+6、ls *.tar | xargs -l tar xvf 批量解包当前目录下的所有tar包
+
+7、cat 文件路径 | grep -i 'xxx' | wc -l 统计文件中xxx字符串出现的次数 

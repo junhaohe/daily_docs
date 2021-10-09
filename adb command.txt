@@ -1,0 +1,30 @@
+1、adb install +.apk 安装apk包
+
+2、adb uninstall+package_name 卸载apk
+
+
+3、adb reboot 重启app
+
+4、adb shell dumpsys meminfo <package_name>/pid 查看应用程序占用内存
+
+5、adb shell ps 查看当前终端中的进程信息
+
+6、adb shell kill pid 杀死指定进程
+
+7、adb pull /路径+文件夹名/  从设备中导出指定文件夹
+
+8、adb logcat | find "关键字"   windows端过滤日志
+
+9、chcp 65001  字体修改为”Lucida Console”设置编码格式为UTF-8
+
+10、chcp 936     输入65001 设置编码格式为GBK
+
+11、adb logcat > xxx.txt 导出log并重命名
+
+12、adb install -r +package_name    覆盖安装apk
+
+13、adb shell+cat proc/meminfo 查看ram大小
+
+14、adb详细命令链接：https://www.ctolib.com/awesome-adb.html
+
+15、adb -s ip/设备sn 具体命令 指定设备执行adb命令

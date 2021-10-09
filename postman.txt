@@ -1,0 +1,40 @@
+/1.验证返回状态码是否是200
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+//2.验证返回body内是否含有某个值
+pm.test("Body matches string", function () {
+    pm.expect(pm.response.text()).to.include("string_you_want_to_search");
+});
+//3.验证某个返回值是否是100
+pm.test("Your test name", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.value).to.eql(100);
+});
+//验证返回body中是否含有某个字符串
+pm.test("Body is correct", function () {
+    pm.response.to.have.body("response_body_string");
+});
+//验证返回头类型
+pm.test("Content-Type is present", function () {
+    pm.response.to.have.header("Content-Type");
+});
+//验证请求时长是否小于200ms
+pm.test("Response time is less than 200ms", function () {
+    pm.expect(pm.response.responseTime).to.be.below(200);
+});
+//验证返回码是否为200
+pm.test("Successful POST request", function () {
+    pm.expect(pm.response.code).to.be.oneOf([201,202]);
+});
+//验证返回数据中是否包含某个字符串
+pm.test("Status code name has string", function () {
+    pm.response.to.have.status("Created");
+});
+//验证json数据的微小验证器
+var jsonObject = xml2Json(responseBody);
+var schema = {
+  "items": {
+    "type": "boolean"
+  }
+};

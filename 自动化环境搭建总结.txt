@@ -1,0 +1,7 @@
+1、首先安装python、安装完成后配置path系统变量，python的安装路径复制进去；
+
+2、win+r 输入cmd打开dos窗口，输入python查看python是否安装成功；
+
+3、安装setuptools(python的基础包工具)
+
+4、安装pip(python的安装包管理工具)

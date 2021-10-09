@@ -1,0 +1,35 @@
+git branch #查看当前分支下的所有分支列表
+
+git branch testing #创建testing分支
+
+git checkout testing #切换到testing分支
+
+git merge testing #在当前分支下合并testing分支
+
+git branch -d testing #在当前分支下删除tesing分支
+
+git fetch origin #从远程仓库抓取本地没有的数据并更新本地数据库
+
+git push (remote) (branch) #退送本地提交内容到远程分支
+
+git branch -r #查看远程分支 
+
+git branch origin :testing #删除远程分支
+
+git remote -v #查看远程仓库
+
+git checkout -b branch name SHA1 #在某次提交上创建分支并切换到该分支
+
+git log #查看git提交记录
+
+git diff branch name #比较2个分支文件差异 
+
+git tag/git tag -l # 查看标签 
+
+git tag -a version -m "note" #添加version标签，注释信息为"note"
+
+git push origin tag #提交tag标签到远程仓库
+
+git tag -d 0.0.1 #删除本地0.0.1标签
+
+git push origin :0.0.1 #删除远程0.0.1标签
